@@ -11,6 +11,11 @@ document.getElementById('btn01').addEventListener('click', function () {
 
     for (let i = 1; i <= input1; i++) {
         numero = parseInt(prompt(i + "° -> Digite um número"));
+        if(isNaN(numero)){
+            result.innerHTML = "Valor invalido detectado";
+            return
+        }
+
         array.push(numero);
     }
     console.log({ array })

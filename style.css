@@ -1,26 +1,31 @@
 body{
     width: 100%;
     height: 100vh;
-    background-color: lightgreen;
-
+    background-color: rgb(150, 189, 150);
 
     & #container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(150, 189, 150);
-        padding: 20px;
+        align-items: center;       
         
         & .exercicio{
             border: 1px solid black;
             border-radius: 20px;
-            padding: 1%;
             margin: 1%;
             background-color: lightgray;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 40%;
+        }
+
+        & .btnJ{
+            padding: auto;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+        & .btnJ:hover{
+            background-color: darkgrey;
         }
     }
 }

@@ -8,32 +8,32 @@ document.getElementById('btn02').addEventListener('click', function () {
 })
 
 function primo(n) {
-    if (!Number.isInteger(n) || n < 0 || typeof n !== "number") {
-        saida.innerHTML = "Erro: Número inválido";
+    if (n < 0) {
+        saida.innerHTML = "valor invalido detectado";
         return
     }
     if (n < 2) {
-        saida.innerHTML = "Número primo não pode ser menor que 2";
+        saida.innerHTML = "False";
         return
     }
     if (n === 2) {
-        saida.innerHTML = "É PRIMO!";
+        saida.innerHTML = "True";
         return
     }
     if (n % 2 == 0) {
-        saida.innerHTML = "Não é primo";
+        saida.innerHTML = "False";
         return
     }
     const limite = Math.sqrt(n);
-    console.log("raiz; " + limite);
+    console.log("Raiz: " + limite);
     for (let i = 3; i <= limite; i += 2) {
         if (n % i == 0) {
-            saida.innerHTML = "Não é primo";
+            saida.innerHTML = "False";
             console.log("divisor encontrado");
             return
         }
 
     }
-    saida.innerHTML = "É PRIMO!";
+    saida.innerHTML = "True";
 
 }
